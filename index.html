@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>حاسبة تكلفة تأثيث المنزل</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="page" id="page1">
+        <h2>أدخل معلوماتك لبدء الحساب</h2>
+        <form id="userInfoForm">
+            <label>الاسم الكامل: <input type="text" name="fullName" id="name" required></label>
+            <label>البريد الإلكتروني: <input type="email" name="email" id="email" required></label>
+            <label>الجنسية: <input type="text" name="nationality" required></label>
+            <label>هل تملك عقاراً في تركيا؟
+                <select name="ownsProperty" id="ownsProperty">
+                    <option value="نعم">نعم</option>
+                    <option value="لا">لا</option>
+                </select>
+            </label>
+            <label id="cityField" style="display:none;">في أي مدينة؟ <input type="text" name="city"></label>
+            <button type="submit">أكمل لحساب الميزانية</button>
+        </form>
+    </div>
+
+    <div class="page" id="page2" style="display:none;">
+        <h2>حاسبة تكلفة تأثيث منزل في إزميت – تركيا</h2>
+        <form id="budget-form">
+            <fieldset>
+                <legend>معلومات العقار</legend>
+                <label>مساحة الشقة بالمتر المربع: <input type="number" id="area" required></label>
+                <label>عدد غرف النوم: <input type="number" required></label>
+                <label>عدد الصالات: <input type="number" required></label>
+                <label>هل يوجد تراس أو حديقة؟
+                    <select><option>نعم</option><option>لا</option></select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>مستوى التأثيث</legend>
+                <label><input type="radio" name="level" value="110" required> اقتصادي</label>
+                <label><input type="radio" name="level" value="160"> متوسط</label>
+                <label><input type="radio" name="level" value="300"> فندقي فاخر</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>الأجهزة الكهربائية</legend>
+                <label>عدد مكيفات 12000 وحدة: <input type="number" id="ac12" required></label>
+                <label>عدد مكيفات 18000 وحدة: <input type="number" id="ac18" required></label>
+                <label>ثلاجة: <select id="fridge"><option>نعم</option><option>لا</option></select></label>
+                <label>غسالة: <select id="washer"><option>نعم</option><option>لا</option></select></label>
+                <label>فرن: <select id="oven"><option>نعم</option><option>لا</option></select></label>
+                <label>غسالة صحون: <select id="dishwasher"><option>نعم</option><option>لا</option></select></label>
+                <label>تلفاز: <select id="tv"><option>نعم</option><option>لا</option></select></label>
+            </fieldset>
+
+            <button type="button" id="calcButton">احسب التكلفة</button>
+            <div id="totalCost" class="note"></div>
+
+            <a href="https://wa.me/905362345082" target="_blank" class="cta-button">احجز موعد محادثة معي الآن</a>
+        </form>
+    </div>
+</body>
+</html>
