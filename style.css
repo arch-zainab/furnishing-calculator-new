@@ -1,1 +1,38 @@
-/* محتوى التنسيق محفوظ سابقاً بدون تغيير */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    direction: rtl;
+    background: #f9f9f9;
+    color: #222;
+    padding: 20px;
+}
+.page {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+fieldset {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+legend {
+    font-weight: bold;
+}
+label {
+    display: block;
+    margin: 10px 0;
+}
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.note {
+    margin-top: 20px;
+    color: green;
+}
